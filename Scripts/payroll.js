@@ -44,13 +44,13 @@ function render() {
   payroll.forEach((p, idx) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${idx + 1}</td>
-      <td>${p.name}</td>
-      <td>${p.days}</td>
-      <td>${p.rate.toFixed(2)}</td>
-      <td>${p.gross.toFixed(2)}</td>
-      <td>${p.deduction.toFixed(2)}</td>
-      <td>${p.net.toFixed(2)}</td>
+      <td data-label="No.">${idx + 1}</td>
+      <td data-label="Employee Name">${p.name}</td>
+      <td data-label="Days Worked">${p.days}</td>
+      <td data-label="Daily Rate">${p.rate.toFixed(2)}</td>
+      <td data-label="Gross Pay">${p.gross.toFixed(2)}</td>
+      <td data-label="Deduction Amount">${p.deduction.toFixed(2)}</td>
+      <td data-label="Net Pay">${p.net.toFixed(2)}</td>
     `;
     tbody.appendChild(tr);
   });
